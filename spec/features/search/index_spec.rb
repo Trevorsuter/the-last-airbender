@@ -24,6 +24,34 @@ RSpec.describe 'search index spec', type: :feature do
         expect(page).to have_css(".name")
       end
     end
+
+    it 'each character should have a photo if applicable' do
+
+      within(".character", match: :first) do
+        expect(page).to have_css(".photo")
+      end
+    end
+
+    it 'each character should show their affiliations' do
+
+      within(".character", match: :first) do
+        expect(page).to have_css(".affiliation")
+      end
+    end
+
+    it 'each character should show their enemies if applicable' do
+
+      within(".character", match: :first) do
+        expect(page).to have_css(".enemies")
+      end
+    end
+
+    it 'each character should show their allies if applicable' do
+      
+      within(".character", match: :first) do
+        expect(page).to have_css(".enemies")
+      end
+    end
   end
   
   describe 'sad path' do

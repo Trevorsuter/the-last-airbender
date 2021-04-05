@@ -2,7 +2,19 @@
 <section class="characters">
   <% @characters.each do |character| %>
     <div class="character">
-      <p class="name"><%= character.name %></p>
+      <%= image_tag("#{character.photoUrl}", class: "photo") %>
+      <p class="name">Name: <%= character.name %></p>
+      <p class="affiliation">Affiliations: <%= character.affiliation %></p>
+      <% if character.enemies %>
+        <p class="enemies">Enemies: <%= character.enemies %></p>
+      <% else %>
+        <p class="enemies">Enemies: None</p>
+      <% end %>
+      <% if character.allies %>
+        <p class="allies">Allies: <%= character.allies %></p>
+      <% else %>
+        <p class="allies">Allies: None</p>
+      <% end %>
     </div>
   <% end %>
 </section>
