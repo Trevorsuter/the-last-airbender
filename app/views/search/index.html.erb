@@ -1,1 +1,8 @@
 <p><%= @total_characters_data.length %> Characters</p>
+<section class="characters">
+  <% @characters.each do |character| %>
+    <div class="character">
+      <p class="name"><%= character.name %></p>
+    </div>
+  <% end %>
+</section>

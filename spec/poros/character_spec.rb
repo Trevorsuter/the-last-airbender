@@ -7,7 +7,7 @@ RSpec.describe Character do
                                 affiliation: ['affiliation 1'], 
                                 allies: ['ally 1', 'ally 2'], 
                                 enemies: ['enemy 1'],
-                                photo: "www.characterphoto.com"})
+                                photoUrl: "www.characterphoto.com"})
 
     expect(@character).to be_a(Character)
   end

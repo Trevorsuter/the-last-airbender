@@ -3,13 +3,13 @@ class Character
               :allies,
               :enemies,
               :affiliation,
-              :photo
+              :photoUrl
   
   def initialize(data)
     @name = data[:name]
     @allies = data[:allies]
     @enemies = data[:enemies]
     @affiliation = data[:affiliation]
-    @photo = data[:photo]
+    @photoUrl = data[:photoUrl]
   end
 end
