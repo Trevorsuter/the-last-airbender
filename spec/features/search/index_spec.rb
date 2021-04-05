@@ -12,6 +12,18 @@ RSpec.describe 'search index spec', type: :feature do
 
       expect(page).to have_content('97 Characters')
     end
+
+    it 'should only show detailed information for the first 25 characters' do
+
+      expect(page).to have_css(".character", count: 25)
+    end
+
+    it 'each character should have their name displayed' do
+
+      within(".character", match: :first) do
+        expect(page).to have_css(".name")
+      end
+    end
   end
   
   describe 'sad path' do
