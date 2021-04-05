@@ -8,9 +8,9 @@ RSpec.describe 'search index spec', type: :feature do
   end
 
   describe 'happy path' do
-    it 'should see the total number of people that belong to that nation' do
+    it 'Should show the amount of characters for that nation' do
 
-
+      expect(page).to have_content('97 Characters')
     end
   end
   
