@@ -2,16 +2,16 @@
 <section class="characters">
   <% @characters.each do |character| %>
     <div class="character">
-      <%= image_tag("#{character.photoUrl}", class: "photo") %>
-      <p class="name">Name: <%= character.name %></p>
-      <p class="affiliation">Affiliations: <%= character.affiliation %></p>
-      <% if character.enemies %>
-        <p class="enemies">Enemies: <%= character.enemies %></p>
+      <%= image_tag("#{character[:photoUrl]}", class: "photo") %>
+      <p class="name">Name: <%= character[:name] %></p>
+      <p class="affiliation">Affiliations: <%= character[:affiliation] %></p>
+      <% if character[:enemies].any? %>
+        <p class="enemies">Enemies: <%= character[:enemies] %></p>
       <% else %>
         <p class="enemies">Enemies: None</p>
       <% end %>
-      <% if character.allies %>
-        <p class="allies">Allies: <%= character.allies %></p>
+      <% if character[:allies].any? %>
+        <p class="allies">Allies: <%= character[:allies] %></p>
       <% else %>
         <p class="allies">Allies: None</p>
       <% end %>
